@@ -3,7 +3,7 @@ package uniquindio.edu.co.singleton.model;
 public final class Notificacion implements INotificable {
 
     /**
-     * Instancia de la clase
+     * Instancia unica de la clase
      */
     private static Notificacion instance;
 
@@ -13,7 +13,7 @@ public final class Notificacion implements INotificable {
     private Notificacion() {}
 
     /**
-     *
+     * Punto de acceso global de la instancia unica
      * @return
      */
     public static Notificacion getInstance() {
@@ -23,6 +23,10 @@ public final class Notificacion implements INotificable {
         return instance;
     }
 
+    /**
+     * Envia una notificación por consola
+     * @param mensaje contenido de la notificación
+     */
     @Override
     public void notificar(String mensaje) {
         System.out.println("NOTIFICACIÓN: " + mensaje);
