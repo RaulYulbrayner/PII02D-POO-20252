@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="520.0" prefHeight="380.0"
+            fx:controller="co.edu.uniquindio.poo.facade.viewController.CineViewController">
+
+    <children>
+        <VBox spacing="10.0" AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0"
+              AnchorPane.rightAnchor="10.0" AnchorPane.bottomAnchor="10.0">
+
+            <Label text="Cine en Casa (Patrón Facade)" style="-fx-font-size:18;" />
+
+            <HBox spacing="10.0">
+                <Button fx:id="btnVerPelicula" text="Ver Película" onAction="#onVerPelicula"/>
+                <Button fx:id="btnTerminarPelicula" text="Terminar Película" onAction="#onTerminarPelicula"/>
+                <Button fx:id="btnLimpiar" text="Limpiar" onAction="#onLimpiar"/>
+            </HBox>
+
+            <TextArea fx:id="txtLog" prefRowCount="12" wrapText="true"
+                      promptText="Aquí verás el flujo orquestado por la Fachada..."/>
+        </VBox>
+    </children>
+</AnchorPane>
+
